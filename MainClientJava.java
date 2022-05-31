@@ -19,7 +19,7 @@ public class MainClientJava {
      */
     public static void main(String[] args) {
         try {
-            ClientjavaGio cc=new ClientjavaGio(InetAddress.getLocalHost(), 2000);
+            Clientjava cc=new Clientjava(InetAddress.getLocalHost(), 2000);
             
         
             cc.leggiData();
