@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package serverjavagio;
+package serverjava;
 import java.net.*;
 import java.io.*;
 import java.util.logging.Level;
@@ -13,7 +13,7 @@ import java.util.logging.Logger;
  *
  * @author Studente
  */
-public class ClientjavaGio {
+public class Clientjava {
     
         DataOutputStream out;
           BufferedReader in;
