@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package serverjavaGio;
+package serverjava;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -17,13 +17,13 @@ import java.util.logging.Logger;
  *
  * @author Studente
  */
-public class ServerjavaGio {
+public class Serverjava {
     ServerSocket ss;
     CountDown c;
     Socket so;
     BufferedWriter bw;
     BufferedReader br;
-    public ServerjavaGio(int porta){
+    public Serverjava(int porta){
         try {
             //apertura del server socket
             ss = new ServerSocket(porta);
@@ -32,7 +32,7 @@ public class ServerjavaGio {
             c.start();
             
         } catch (IOException ex) {
-            Logger.getLogger(ServerjavaGio.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Serverjava.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     public void inAscolto(){
@@ -40,7 +40,7 @@ public class ServerjavaGio {
             so = ss.accept();
             System.out.println("connessione stabilita");
         } catch (IOException ex) {
-            Logger.getLogger(ServerjavaGio.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Serverjava.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     public void Scrivi(String messaggio){
@@ -49,7 +49,7 @@ public class ServerjavaGio {
             bw.write(messaggio+"\n");
             bw.flush();
         } catch (IOException ex) {
-            Logger.getLogger(ServerjavaGio.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Serverjava.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }
